@@ -4,7 +4,7 @@ We STILL have no idea how to hack a furby connect
 **Slides, videos, firmware, terrible code, and more from our talks at WAHCKon and BSidesCBR** 
 
 <p align="center">
-	<img src="furbyhax.png">
+	<img src="furbhax.png">
 </p>
 
 ## Authors
