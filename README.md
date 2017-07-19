@@ -7,4 +7,5 @@ We STILL have no idea how to hack a furby connect
 l0ss
 swarley
 
-## Massive props to https://github.com/Jeija/bluefluff
+## Massive props to: 
+https://github.com/Jeija/bluefluff
