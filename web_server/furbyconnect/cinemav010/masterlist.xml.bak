@@ -1,0 +1,161 @@
+<!-- MasterList.xml -->
+
+<!-- Notes:
+	- Make use that all file names are in lowercase, and with no spaces etc. EXCEPT for the DLC files. Put those in caps!
+	- This file is loaded if XML\Global\Cinema.xml points at it!
+	- For demo purposes, or other special builds, a whole new folder should be used, with a separate masterlist.xml file.
+	- Give http://www.epochconverter.com/ a go for getting Unix time.
+	- There would normally be at least 3 WeeklyBundle tags since that is how long each DLC is meant to last for.
+	- I would also expect a single FutureBunde tag to handle the not yet released future content.
+	- The checksums are in hex format and must start with '0x'. We use HashCalc and the Adler32 hash.
+	- You can download HashCalc from http://www.slavasoft.com/hashcalc/index.htm
+	- The 'formatversion' is used to trigger a pop up in game saying your app is out of date. Half intended to match the folder numbering.
+-->
+
+<BundleList formatversion="10">
+
+	<!-- This is a list of the DLC files. Probably only the one for each language. The file name is used to
+		 detect which language it is for.
+
+		 NOTE: If you change to a new DLC file, you will need to go into the individual video XML files
+		 and update the DLC file that the called sequences require.
+	-->
+
+	<ToyDLC size="936408" checksum="0x42BA2F97" tags="ToyDLCWeek010 TooHotChilliLCD">TU010110.DLC</ToyDLC>		<!-- English DLC Pack 10 -->
+	<ToyDLC size="946122" checksum="0x0770A796" tags="ToyDLCWeek010 TooHotChilliLCD">TR010110.DLC</ToyDLC>		<!-- Russian DLC Pack 10 -->
+	<ToyDLC size="912608" checksum="0x806CE493" tags="ToyDLCWeek011 TooHotChilliLCD">TU010160.DLC</ToyDLC>		<!-- English DLC Pack 11 -->
+	<ToyDLC size="913570" checksum="0x45831F8F" tags="ToyDLCWeek011 TooHotChilliLCD">TR010170.DLC</ToyDLC>		<!-- Russian DLC Pack 11 -->
+	
+	<!-- ---------- -->
+	<!-- DLC PACK 10 -->
+	<!-- ---------- -->
+
+	<!-- Fri, 13 Jan 2017 00:00:00 GMT (1484265600) -->
+	<WeeklyBundle dlctag="ToyDLCWeek010" timestamp="1484265600">
+		<VideoBundle name="exsandohs3.xml" group="9"/>
+		<VideoBundle name="myhouse2.xml" group="1" new="true"/>
+		<VideoBundle name="cheapthrills2.xml" group="7"/>
+
+		<Learnt name="CheapThrills" group="8"/>
+		<Learnt name="ExsAndOhs" group="10"/>
+		<Learnt name="MyHouse" group="2"/> <!-- Newest -->
+
+		<FurbyAlerts lang="U">		<!-- You can add multiple ones if you wish, and one will be chosen at random. -->
+			<Sequence dlc="ToyDLCWeek010" type="Specific" input="75" index="0" subindex="2" specific="1"/>
+		</FurbyAlerts>
+		<FurbyAlerts lang="R">
+			<Sequence dlc="ToyDLCWeek010" type="Specific" input="73" index="0" subindex="2" specific="1"/>
+		</FurbyAlerts>
+
+		<WeeklyObsession group="11"/>
+	</WeeklyBundle>
+
+	<!-- Fri, 20 Jan 2017 00:00:00 GMT (1484870400) --> 
+	<WeeklyBundle dlctag="ToyDLCWeek010" timestamp="1484870400">
+		<VideoBundle name="myhouse2.xml" group="1"/>
+		<VideoBundle name="bulldogcowboy.xml" group="3" new="true"/>
+		<VideoBundle name="exsandohs3.xml" group="9"/>
+
+		<Learnt name="ExsAndOhs" group="10"/>
+		<Learnt name="MyHouse" group="2"/>
+		<Learnt name="BulldogCowboy" group="4"/> <!-- Newest -->
+
+		<FurbyAlerts lang="U">		<!-- You can add multiple ones if you wish, and one will be chosen at random. -->
+			<Sequence dlc="ToyDLCWeek010" type="Specific" input="75" index="0" subindex="3" specific="1"/>
+		</FurbyAlerts>
+		<FurbyAlerts lang="R">
+			<Sequence dlc="ToyDLCWeek010" type="Specific" input="73" index="0" subindex="3" specific="1"/>
+		</FurbyAlerts>
+
+		<WeeklyObsession group="12"/>
+	</WeeklyBundle>
+
+	<!-- Fri, 27 Jan 2017 00:00:00 GMT (1485475200) -->
+	<WeeklyBundle dlctag="ToyDLCWeek010" timestamp="1485475200">
+		<VideoBundle name="bulldogcowboy.xml" group="3"/>
+		<VideoBundle name="iknowwhatyoudid.xml" group="5" new="true"/>
+		<VideoBundle name="myhouse2.xml" group="1"/>
+
+		<Learnt name="MyHouse" group="2"/>
+		<Learnt name="BulldogCowboy" group="4"/> 
+		<Learnt name="IKnowWhatYouDidLastSummer" group="6"/> <!-- Newest -->
+
+		<FurbyAlerts lang="U">		<!-- You can add multiple ones if you wish, and one will be chosen at random. -->
+			<Sequence dlc="ToyDLCWeek010" type="Specific" input="75" index="0" subindex="4" specific="1"/>
+		</FurbyAlerts>
+		<FurbyAlerts lang="R">
+			<Sequence dlc="ToyDLCWeek010" type="Specific" input="73" index="0" subindex="4" specific="1"/>
+		</FurbyAlerts>
+
+		<WeeklyObsession group="13"/>
+	</WeeklyBundle>
+
+
+
+	<!-- ---------- -->
+	<!-- DLC PACK 11 -->
+	<!-- ---------- -->
+
+	<!-- Fri, 03 Feb 2017 00:00:00 GMT (1486080000) -->
+	<WeeklyBundle dlctag="ToyDLCWeek011" timestamp="1486080000">
+		<VideoBundle name="iknowwhatyoudid2.xml" group="9"/>
+		<VideoBundle name="onmymind.xml" group="1" new="true"/>
+		<VideoBundle name="bulldogcowboy2.xml" group="7"/>
+
+		<Learnt name="BulldogCowboy" group="8"/>
+		<Learnt name="IKnowWhatYouDidLastSummer" group="10"/>
+		<Learnt name="OnMyMind" group="2"/> <!-- Newest -->
+
+		<FurbyAlerts lang="U">		<!-- You can add multiple ones if you wish, and one will be chosen at random. -->
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="2" specific="1"/>
+		</FurbyAlerts>
+		<FurbyAlerts lang="R">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="2" specific="1"/>
+		</FurbyAlerts>
+
+		<WeeklyObsession group="11"/>
+	</WeeklyBundle>
+
+	<!-- Fri, 10 Feb 2017 00:00:00 GMT (1486684800) --> 
+	<WeeklyBundle dlctag="ToyDLCWeek011" timestamp="1486684800">
+		<VideoBundle name="onmymind.xml" group="1"/>
+		<VideoBundle name="mlpvalentine.xml" group="3" new="true"/>
+		<VideoBundle name="iknowwhatyoudid2.xml" group="9"/>
+
+		<Learnt name="IKnowWhatYouDidLastSummer" group="10"/>
+		<Learnt name="OnMyMind" group="2"/>
+		<Learnt name="MLPValentine" group="4"/> <!-- Newest -->
+
+		<FurbyAlerts lang="U">		<!-- You can add multiple ones if you wish, and one will be chosen at random. -->
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="3" specific="1"/>
+		</FurbyAlerts>
+		<FurbyAlerts lang="R">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="3" specific="1"/>
+		</FurbyAlerts>
+
+		<WeeklyObsession group="12"/>
+	</WeeklyBundle>
+
+	<!-- Fri, 17 Feb 2017 00:00:00 GMT (1487289600) -->
+	<WeeklyBundle dlctag="ToyDLCWeek011" timestamp="1487289600">
+		<VideoBundle name="mlpvalentine.xml" group="3"/>
+		<VideoBundle name="justlikefire.xml" group="5" new="true"/>
+		<VideoBundle name="onmymind.xml" group="1"/>
+
+		<Learnt name="OnMyMind" group="2"/>
+		<Learnt name="MLPValentine" group="4"/> 
+		<Learnt name="JustLikeFire" group="6"/> <!-- Newest -->
+
+		<FurbyAlerts lang="U">		<!-- You can add multiple ones if you wish, and one will be chosen at random. -->
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="4" specific="1"/>
+		</FurbyAlerts>
+		<FurbyAlerts lang="R">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="4" specific="1"/>
+		</FurbyAlerts>
+
+		<WeeklyObsession group="13"/>
+	</WeeklyBundle>
+
+	<!-- Fri, 24 Feb 2017 00:00:00 GMT (1487894400) --> <!--TODO-->
+	<FutureBundle dlctag="ToyDLCWeek011" timestamp="1487894400" duration="604800" group="14"/>
+</BundleList>

@@ -1,0 +1,61 @@
+<Bundle>
+	<ID>BulldogCowboy</ID>													<!-- This is meant to be both a friendly name and a unique identifier. Required. -->
+
+	<Set name="BulldogCowboySet">
+		<PreviewImage size="139353">bulldogcowboy.png</PreviewImage>			<!-- This is the poster image. Either JPGs or PNGs can be used. Required. -->
+		<VideoFile size="9995201">bulldogcowboy.mp4</VideoFile>				<!-- This is the video itself. Only use MP4s. Required. -->
+		<FileBundle size="0"></FileBundle>									<!-- This is the PAK file bundle. These would be made via XGSCentral. Leave empty and set size to 0 if not needed. -->
+		<AppDLC size="0" checksum="0"></AppDLC>								<!-- This is the 8 character code of the App DLC this video uses. Leave empty and set size and checksum to zero if none. -->
+
+		<!-- These are processed in order, starting with the top. It keeps going until it matches one and uses that. These are processed and picked when the video is played. -->
+		<Lang lang="U">
+			<SelectEvents>Phygital</SelectEvents>							<!-- Valid tags are 'requirefurby', 'requirenofurby', 'minplays' and 'probability'. Probability should be from 0.0 to 1.0 -->
+		</Lang>
+		<Lang lang="R">
+			<SelectEvents>PhygitalR</SelectEvents>
+		</Lang>
+		<Lang>
+			<SelectEvents>Main</SelectEvents>
+		</Lang>
+	</Set>
+
+	<EventGroup name="Phygital">
+		<Event time="0.48"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="0" specific="2"/>
+		</Event>
+		<Event time="9.10"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="0" specific="3"/>
+		</Event>
+		<Event time="14.78"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="0" specific="4"/>
+		</Event>
+		<Event time="27.82"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="0" specific="5"/>
+		</Event>
+		<Event time="99.9"	type="PhygitalSequence" data="CancelPrevious"> <!-- Played when video ends (time greater than video length) -->
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="75" index="0" subindex="0" specific="6"/>
+		</Event>
+	</EventGroup>
+	<EventGroup name="PhygitalR">
+		<Event time="0.76"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="0" specific="2"/>
+		</Event>
+		<Event time="9.10"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="0" specific="3"/>
+		</Event>
+		<Event time="15.05"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="0" specific="4"/>
+		</Event>
+		<Event time="27.77"	type="PhygitalSequence" data="CancelPrevious">
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="0" specific="5"/>
+		</Event>
+		<Event time="99.9"	type="PhygitalSequence" data="CancelPrevious"> <!-- Played when video ends (time greater than video length) -->
+			<Sequence dlc="ToyDLCWeek011" type="Specific" input="73" index="0" subindex="0" specific="6"/>
+		</Event>
+	</EventGroup>
+	<EventGroup name="Main">
+		<Event time="4.0" 	type="PlayAnimGroup" 	data="WatchMovieOoh"			/>
+		<Event time="22.0" 	type="PlayAnimGroup" 	data="CelebrateLoop"			/>
+		<Event time="28.0" 	type="StopLoop"											/>
+	</EventGroup>
+</Bundle>
